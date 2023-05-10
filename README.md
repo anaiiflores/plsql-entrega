@@ -1,7 +1,7 @@
 # plsql-entrega
 
 ## 1
----
+~~~
 
  CREATE OR REPLACE FUNCTION get_num_employees() 
   RETURNS void 
@@ -20,20 +20,20 @@
       
   END;
 
----
+~~~
 
 ## 2
----
- DO 
+~~~
+DO 
   BEGIN
       FOR EMPLOYEES IN (SELECT * FROM EMPLOYEES WHERE JOB_ID = 'ST_CLERK') LOOP
           RAISE NOTICE '%', EMPLOYEES.FIRST_NAME;
       END LOOP;
   END;
----
+~~~
 
 ## 3
----
+~~~
   CREATE OR REPLACE PROCEDURE emp_update_salary() 
   
   DECLARE 
@@ -49,5 +49,4 @@
       END LOOP; 
       CLOSE cur_emp
   END;
----
-
+~~~
